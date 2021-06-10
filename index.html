@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1>Cloud User</h1>
+    <center>
+      <a href="file:///home/ak/workspace/firebase/cloud-mil/product.html"><button>Add Product</button></a>
+    </center>
+    <div class="content">
+      <form id="add-user-form">
+        <input type="text" name="first_name" placeholder="User first name">
+        <input type="text" name="last_name" placeholder="User first name">
+        <input type="text" name="contact" placeholder="User Contact">
+        <button>Add User</button>
+      </form>
+
+      <ul id="user-list"></ul>
+
+    </div>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAdxlrM6waGGV-jPUGySm7RhSzgqvHCF-M",
+        authDomain: "sample-mill.firebaseapp.com",
+        projectId: "sample-mill",
+        storageBucket: "sample-mill.appspot.com",
+        messagingSenderId: "318110430135",
+        appId: "1:318110430135:web:e0b37dcad496f5b8166e32",
+        measurementId: "G-8P2T21GGJS"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script> -->
+
+<!-- <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAdxlrM6waGGV-jPUGySm7RhSzgqvHCF-M",
+    authDomain: "sample-mill.firebaseapp.com",
+    projectId: "sample-mill",
+    storageBucket: "sample-mill.appspot.com",
+    messagingSenderId: "318110430135",
+    appId: "1:318110430135:web:e0b37dcad496f5b8166e32",
+    measurementId: "G-8P2T21GGJS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script> -->

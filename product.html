@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1>Product</h1>
+    <center>
+      <a href="file:///home/ak/workspace/firebase/cloud-mil/index.html"><button>Back</button></a>
+    </center>
+    <div class="content">
+      <form id="add-product-form">
+        <input type="text" name="name" placeholder="Product Name">
+        <input type="text" name="price" placeholder="Product Price">
+        <button>Add Product</button>
+      </form>
+
+      <ul id="product-list"></ul>
+
+    </div>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAdxlrM6waGGV-jPUGySm7RhSzgqvHCF-M",
+        authDomain: "sample-mill.firebaseapp.com",
+        projectId: "sample-mill",
+        storageBucket: "sample-mill.appspot.com",
+        messagingSenderId: "318110430135",
+        appId: "1:318110430135:web:e0b37dcad496f5b8166e32",
+        measurementId: "G-8P2T21GGJS"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="product.js"></script>
+</html>
